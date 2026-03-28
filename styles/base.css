@@ -96,7 +96,7 @@ nav a:hover {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.1rem, 7vw, 5rem);
+    font-size: 3rem;
     font-weight: 900;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.45);
     margin-bottom: 0.6rem;
@@ -219,7 +219,7 @@ footer {
     }
 
     nav {
-        gap: 0.3rem;
+        justify-content: space-evenly;
     }
 
     nav a {
@@ -237,7 +237,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: clamp(1.5rem, 5vw, 3rem);
+        font-size: 2rem;
     }
 
     .hero-content p {
@@ -251,12 +251,13 @@ footer {
     }
 
     nav {
-        gap: 0.2rem;
+        justify-content: space-evenly;
     }
 
     nav a {
         font-size: 0.6rem;
         padding: 0.25rem 0.3rem;
+        justify-content: space-evenly;
     }
 
     .hero {
@@ -265,7 +266,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: clamp(1.2rem, 4vw, 2.5rem);
+        font-size: 1.5rem;
     }
 
     .hero-content p {
