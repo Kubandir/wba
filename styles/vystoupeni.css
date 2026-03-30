@@ -1,0 +1,94 @@
+.content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem 5.5rem;
+}
+
+.performances-head {
+    margin-bottom: 2rem;
+}
+
+.performances-head h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.performances-head p {
+    font-family: 'Inter', sans-serif;
+    color: #515151;
+    line-height: 1.75;
+    max-width: 760px;
+    font-size: 1rem;
+}
+
+.performances-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.performance-card {
+    border: 1px solid #d9e9f2;
+    border-left-width: 4px;
+    border-radius: 3px;
+    padding: 0.95rem;
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.performance-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.performance-info {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #4c4c4c;
+    display: grid;
+    gap: 0.3rem;
+}
+
+.performance-card.active {
+    background: #f3fafe;
+    border-color: #cde4f2;
+    border-left-color: #69a8c8;
+}
+
+.performance-card.active h3 {
+    color: #2f5f78;
+}
+
+.performance-card.inactive {
+    background: #f6f6f6;
+    border-color: #dfdfdf;
+    border-left-color: #a8a8a8;
+}
+
+.performance-card.inactive h3 {
+    color: #5c5c5c;
+}
+
+@media (max-width: 980px) {
+    .performances-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .content {
+        padding: 3rem 1rem 4rem;
+    }
+
+    .performances-head h2 {
+        font-size: 1.7rem;
+    }
+
+    .performances-grid {
+        grid-template-columns: 1fr;
+    }
+}
