@@ -1,3 +1,8 @@
+@keyframes section-rise {
+    0%   { opacity: 0; transform: translateY(28px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 section.content {
     max-width: 1000px;
     margin: 0 auto;
@@ -7,9 +12,18 @@ section.content {
 .section-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
     align-items: center;
+    gap: 4rem;
     margin-bottom: 5rem;
+    animation: section-rise 0.8s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+}
+
+@supports not (animation-timeline: view()) {
+    .section-block               { animation-delay: 0.1s; animation-timeline: auto; }
+    .section-block:nth-of-type(2) { animation-delay: 0.25s; }
+    .section-block:nth-of-type(3) { animation-delay: 0.4s; }
 }
 
 .section-block.reverse {
@@ -21,10 +35,10 @@ section.content {
 }
 
 .section-text h2 {
+    margin-bottom: 1rem;
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 1rem;
 }
 
 .section-text p {
@@ -39,54 +53,61 @@ section.content {
 }
 
 .img-placeholder {
-    width: 100%;
-    aspect-ratio: 4/3;
-    background: #e8f4fb;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #e8f4fb;
     color: #7ab8d9;
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-placeholder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(42, 127, 168, 0.18);
 }
 
 .tags {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .tag {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.75rem;
     padding: 0.25rem 0.75rem;
     border: 1px solid #7ab8d9;
     color: #2a7fa8;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
-    transition: 0.5s;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
 }
 
 .tag:hover {
     background: #7ab8d9;
     color: white;
+    transform: translateY(-2px);
     cursor: default;
 }
 
 .info-list {
-    margin-top: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    margin-top: 1.25rem;
 }
 
 .info-row {
     display: flex;
-    gap: 1rem;
     align-items: flex-start;
+    gap: 1rem;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: #333;
@@ -98,9 +119,9 @@ section.content {
 }
 
 hr.section-sep {
+    margin-bottom: 5rem;
     border: none;
     border-top: 1px solid #e0e0e0;
-    margin-bottom: 5rem;
 }
 
 @media (max-width: 700px) {
