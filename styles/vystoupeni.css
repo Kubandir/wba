@@ -58,6 +58,56 @@
     border-color: #2f5f78;
 }
 
+.performance-video {
+    width: 100%;
+    height: 280px;
+    border: 0;
+    display: block;
+    flex-shrink: 0;
+    background: #000;
+    object-fit: cover;
+}
+
+.performance-video-link {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.performance-video-link .performance-video {
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.performance-video-link:hover .performance-video {
+    transform: scale(1.04);
+    filter: brightness(0.85);
+}
+
+.play-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    pointer-events: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.performance-video-link:hover .play-badge {
+    background: #cc0000;
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
 .performance-image {
     height: 280px;
     background:
@@ -154,44 +204,105 @@
     text-overflow: ellipsis;
 }
 
-.performance-card.active {
+.performance-card.upcoming {
+    background: #fff8e6;
+    border-color: #f0d990;
+    border-top-color: #d4a017;
+    border-top-width: 6px;
+    box-shadow: 0 6px 16px rgba(212, 160, 23, 0.12);
+}
+
+.performance-card.upcoming h3 {
+    color: #7a5b00;
+}
+
+.performance-card.upcoming .performance-theme {
+    background: #d4a017;
+    color: #fff;
+    border-color: #d4a017;
+}
+
+.performance-card.upcoming .performance-info dt {
+    color: #b08820;
+}
+
+.performance-card.past {
     background: #f3fafe;
     border-color: #cde4f2;
     border-top-color: #69a8c8;
 }
 
-.performance-card.active h3 {
+.performance-card.past h3 {
     color: #2f5f78;
 }
 
-.performance-card.inactive {
-    background: #f6f6f6;
-    border-color: #dfdfdf;
-    border-top-color: #a8a8a8;
+.status-heading {
+    margin: 2.5rem 0 1.25rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2f5f78;
 }
 
-.performance-card.inactive h3 {
-    color: #5c5c5c;
+.status-heading:first-of-type {
+    margin-top: 0;
 }
 
-.performance-card.inactive .performance-image {
+.performance-photo {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.performance-image-empty {
     background:
         linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%),
-        repeating-linear-gradient(45deg, #ececec 0 14px, #e0e0e0 14px 28px);
+        repeating-linear-gradient(45deg, #e3eef5 0 14px, #d6e6ef 14px 28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.performance-card.inactive .performance-theme {
-    color: #6f6f6f;
-    background: #ffffff;
-    border-color: #d8d8d8;
+.performance-image-empty span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5c8aa6;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
 }
 
-.performance-card.inactive .performance-info {
-    border-top-color: #e2e2e2;
+.performance-image-empty::after {
+    display: none;
 }
 
-.performance-card.inactive .performance-info dt {
-    color: #9a9a9a;
+.performance-image-upcoming {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 60%),
+        repeating-linear-gradient(45deg, #fce7a8 0 14px, #f6d780 14px 28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.performance-image-upcoming::after {
+    display: none;
+}
+
+.upcoming-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7a5b00;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.7rem 1.4rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(212, 160, 23, 0.18);
 }
 
 @media (max-width: 700px) {
@@ -208,7 +319,9 @@
         gap: 1.25rem;
     }
 
-    .performance-image {
+    .performance-image,
+    .performance-video,
+    .performance-photo {
         height: 220px;
     }
 }

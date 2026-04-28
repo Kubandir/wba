@@ -73,6 +73,22 @@ section.content {
     box-shadow: 0 12px 28px rgba(42, 127, 168, 0.18);
 }
 
+.section-img,
+.section-map {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 0;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section-img:hover,
+.section-map:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(42, 127, 168, 0.18);
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
