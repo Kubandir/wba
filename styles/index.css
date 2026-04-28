@@ -52,27 +52,6 @@ section.content {
     margin-top: 0.75rem;
 }
 
-.img-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    background: #e8f4fb;
-    color: #7ab8d9;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.img-placeholder:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(42, 127, 168, 0.18);
-}
-
 .section-img,
 .section-map {
     width: 100%;

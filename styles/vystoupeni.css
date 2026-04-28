@@ -116,13 +116,6 @@
     transform: translate(-50%, -50%) scale(1.08);
 }
 
-.performance-image {
-    height: 280px;
-    background: #e3eef5;
-    position: relative;
-    flex-shrink: 0;
-}
-
 .performance-body {
     padding: 1.25rem 1.4rem 1.4rem;
     display: flex;
@@ -271,7 +264,6 @@
         gap: 1.25rem;
     }
 
-    .performance-image,
     .performance-video,
     .performance-photo {
         height: 220px;
