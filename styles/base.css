@@ -112,7 +112,7 @@ nav a:hover::after {
     height: 2px;
     margin: 5px auto;
     background: white;
-    border-radius: 999px;
+    border-radius: 50%;
 }
 
 .hero {
