@@ -11,13 +11,13 @@ body {
 }
 
 @keyframes fade-up {
-    0%   { opacity: 0; transform: translateY(18px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes menu-drop {
-    0%   { opacity: 0; transform: translateY(-8px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 header {
@@ -48,7 +48,7 @@ nav a {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     transition: color 0.25s ease;
 }
 
@@ -97,7 +97,6 @@ nav a:hover::after {
     height: 40px;
     border: 0;
     background: transparent;
-    border-radius: 999px;
     cursor: pointer;
 }
 
@@ -107,7 +106,7 @@ nav a:hover::after {
     height: 2px;
     margin: 5px auto;
     background: white;
-    border-radius: 999px;
+    border-radius: 50px;
 }
 
 .hero {
@@ -160,7 +159,7 @@ nav a:hover::after {
 .hero-content p {
     font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     animation: fade-up 0.9s ease-out 0.35s both;
 }
@@ -198,7 +197,7 @@ footer {
 
 .footer-col h4 {
     margin-bottom: 0.85rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #111;

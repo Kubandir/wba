@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         img.className = 'media-photo';
         img.src = src;
         img.alt = '';
-        img.loading = 'lazy';
 
         card.appendChild(img);
         card.addEventListener('click', function () { openLightbox(src); });

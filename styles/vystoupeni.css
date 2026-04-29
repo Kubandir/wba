@@ -28,11 +28,6 @@
     align-items: start;
 }
 
-@keyframes perf-in {
-    0% { opacity: 0; transform: translateY(20px); }
-    100%   { opacity: 1; transform: translateY(0); }
-}
-
 .performance-card {
     border: 1px solid #d9e9f2;
     border-top-width: 4px;
@@ -41,7 +36,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease;
-    animation: perf-in 0.7s ease-out both;
+    animation: fade-up 0.7s ease-out both;
 }
 
 .performance-card:hover {
@@ -96,7 +91,6 @@
     background: rgba(0, 0, 0, 0.6);
     pointer-events: none;
     transition: background 0.3s ease, transform 0.3s ease;
-    font-size: 0;
 }
 
 .play-badge::before {
@@ -129,13 +123,13 @@
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
     color: #2f5f78;
     background: #ffffff;
     border: 1px solid #cde4f2;
     align-self: flex-start;
     padding: 0.3rem 0.7rem;
-    border-radius: 999px;
+    border-radius: 50px;
     white-space: nowrap;
 }
 
@@ -177,7 +171,7 @@
 }
 
 .performance-info dt {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;

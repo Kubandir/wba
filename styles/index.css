@@ -1,8 +1,3 @@
-@keyframes section-rise {
-    0%   { opacity: 0; transform: translateY(28px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
 section.content {
     max-width: 1000px;
     margin: 0 auto;
@@ -15,23 +10,14 @@ section.content {
     align-items: center;
     gap: 4rem;
     margin-bottom: 5rem;
-    animation: section-rise 0.8s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 60%;
+    animation: fade-up 0.8s ease-out 0.1s both;
 }
 
-@supports not (animation-timeline: view()) {
-    .section-block               { animation-delay: 0.1s; animation-timeline: auto; }
-    .section-block:nth-of-type(2) { animation-delay: 0.25s; }
-    .section-block:nth-of-type(3) { animation-delay: 0.4s; }
-}
+.section-block:nth-of-type(2) { animation-delay: 0.25s; }
+.section-block:nth-of-type(3) { animation-delay: 0.4s; }
 
-.section-block.reverse {
-    direction: rtl;
-}
-
-.section-block.reverse > * {
-    direction: ltr;
+.section-block.reverse .section-img {
+    order: -1;
 }
 
 .section-text h2 {
