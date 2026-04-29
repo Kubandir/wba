@@ -31,7 +31,7 @@ section.content {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.75;
-    color: #444;
+    color: #515151;
 }
 
 .section-text p + p {
@@ -52,7 +52,7 @@ section.content {
 .section-img:hover,
 .section-map:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(42, 127, 168, 0.18);
+    box-shadow: 0 12px 28px rgba(47, 95, 120, 0.15);
 }
 
 .tags {
@@ -64,8 +64,8 @@ section.content {
 
 .tag {
     padding: 0.25rem 0.75rem;
-    border: 1px solid #7ab8d9;
-    color: #2a7fa8;
+    border: 1px solid #69a8c8;
+    color: #2f5f78;
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
@@ -73,7 +73,7 @@ section.content {
 }
 
 .tag:hover {
-    background: #7ab8d9;
+    background: #69a8c8;
     color: white;
     transform: translateY(-2px);
     cursor: default;
@@ -92,7 +92,7 @@ section.content {
     gap: 1rem;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: #333;
+    color: #515151;
 }
 
 .info-row strong {
@@ -110,9 +110,5 @@ hr.section-sep {
     .section-block {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .section-block.reverse {
-        direction: ltr;
     }
 }

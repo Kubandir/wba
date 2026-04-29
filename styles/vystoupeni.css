@@ -21,6 +21,7 @@
     font-size: 1rem;
 }
 
+
 .performances-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,11 +42,7 @@
 
 .performance-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 14px 28px rgba(47, 95, 120, 0.14);
-}
-
-.performance-theme {
-    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 12px 28px rgba(47, 95, 120, 0.15);
 }
 
 .performance-card:hover .performance-theme {
@@ -125,12 +122,13 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #2f5f78;
-    background: #ffffff;
-    border: 1px solid #cde4f2;
+    background: #fff;
+    border: 1px solid #d9e9f2;
     align-self: flex-start;
     padding: 0.3rem 0.7rem;
     border-radius: 50px;
     white-space: nowrap;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .performance-card h3 {
@@ -142,7 +140,7 @@
 
 .performance-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     color: #515151;
     line-height: 1.6;
     margin: 0;
@@ -174,14 +172,14 @@
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.15em;
     color: #8aa9bb;
 }
 
 .performance-info dd {
     margin: 0;
-    font-size: 0.92rem;
-    color: #2f3a42;
+    font-size: 0.9rem;
+    color: #111;
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
@@ -189,30 +187,28 @@
 }
 
 .performance-card.upcoming {
-    background: #fff8e6;
-    border-color: #f0d990;
-    border-top-color: #d4a017;
-    border-top-width: 6px;
-    box-shadow: 0 6px 16px rgba(212, 160, 23, 0.12);
-}
-
-.performance-card.upcoming h3 {
-    color: #7a5b00;
+    background: #fce4ec;
+    border-color: #c8336d;
+    border-top-color: #c8336d;
 }
 
 .performance-card.upcoming .performance-theme {
-    background: #d4a017;
+    background: #c8336d;
     color: #fff;
-    border-color: #d4a017;
+    border-color: #c8336d;
+}
+
+.performance-card.upcoming .performance-info {
+    border-top-color: #f5b9ce;
 }
 
 .performance-card.upcoming .performance-info dt {
-    color: #b08820;
+    color: #c8336d;
 }
 
 .performance-card.past {
     background: #f3fafe;
-    border-color: #cde4f2;
+    border-color: #d9e9f2;
     border-top-color: #69a8c8;
 }
 
@@ -241,7 +237,7 @@
 }
 
 .performance-card.no-media .performance-body {
-    padding: 1.4rem 1.4rem 1.4rem;
+    padding: 1.4rem;
 }
 
 @media (max-width: 700px) {

@@ -23,6 +23,7 @@
     font-size: 1rem;
 }
 
+
 .media-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31,7 +32,7 @@
 
 .media-card {
     border: 1px solid #d9e9f2;
-    background: #f6fbfe;
+    background: #f3fafe;
     border-radius: 3px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -40,7 +41,7 @@
 
 .media-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 26px rgba(24, 94, 126, 0.18);
+    box-shadow: 0 12px 28px rgba(47, 95, 120, 0.15);
 }
 
 .media-photo {
@@ -63,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 67;
     padding: 2rem;
 }
 
