@@ -13,9 +13,6 @@ section.content {
     animation: fade-up 0.8s ease-out 0.1s both;
 }
 
-.section-block:nth-of-type(2) { animation-delay: 0.25s; }
-.section-block:nth-of-type(3) { animation-delay: 0.4s; }
-
 .section-block.reverse .section-img {
     order: -1;
 }
