@@ -10,7 +10,7 @@ section.content {
     align-items: center;
     gap: 4rem;
     margin-bottom: 5rem;
-    animation: fade-up 0.8s ease-out 0.1s both;
+    animation: fade-up 0.8s ease-out 0.1s;
 }
 
 .section-block.reverse .section-img {

@@ -36,7 +36,7 @@
     border-radius: 3px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fade-up 0.6s ease-out both;
+    animation: fade-up 0.6s ease-out;
 }
 
 .media-card:hover {
